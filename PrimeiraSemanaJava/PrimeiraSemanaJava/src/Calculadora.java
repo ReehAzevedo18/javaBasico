@@ -1,3 +1,5 @@
+package PrimeiraSemanaJava.PrimeiraSemanaJava.src;
+
 public class Calculadora {
 
     int valorPadraoMultiplicacao = 2;
