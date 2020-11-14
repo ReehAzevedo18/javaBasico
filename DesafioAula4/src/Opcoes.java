@@ -24,24 +24,28 @@ public class Opcoes {
     Scanner sc = new Scanner(System.in);
     
     public void selecionarOpcao1(){
-        String animal = "";
+        String animal = lerAnimal();
         String comAnimal = "Que legal o meu também!";
         String semAnimal = "Eu prefiro gato..";
         
-        while(!animal.equals("Gato")){
-            System.out.println("Qual o nome do seu animal preferido?");
-            animal = sc.nextLine();
-            
+        do{
+            animal = lerAnimal();
             if(!animal.equals("Gato"))
                 Impressora.imprimaValor(semAnimal);
-        }
-
-        if(animal.equals("Gato"))
-            Impressora.imprimaValor(comAnimal);
+        }while(!animal.equals("Gato"));
+            if(animal.equals("Gato"))
+                Impressora.imprimaValor(comAnimal);
       
     }
 
-    public void selecionarOpcao2(){
+    public String lerAnimal(){
+        String animal;
+        System.out.println("Qual o nome do seu animal preferido?");
+        animal = sc.nextLine();
+        return animal;
+    }
+
+    public int selecionarOpcao2(){
         String msgMenor12 = "Ele ainda é uma criança";
         String msgMaior11 = "Adolescência é fogo.. ";
         String msgMaior18 = "Ele já é um adulto!";
@@ -55,11 +59,19 @@ public class Opcoes {
         }else{
             Impressora.imprimaValor(msgMaior18);
         }
+
+        return idade;
     }
 
-    public void selecionarOpcao3(){
-        String mensagem = "Em construção ...";
-        Impressora.imprimaValor(mensagem);
+    public void selecionarOpcao3(int idade){
+        if (idade == 0){
+            Impressora.imprimaValor("É necessário informar a idade!");
+        }else{
+            for(int i=0; i < idade; i++){
+                Impressora.imprimaValor(i + "...");
+            }
+        }
+        Impressora.imprimaValor(idade + "são tantos anos.");
     }
 
 
