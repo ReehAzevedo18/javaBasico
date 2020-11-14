@@ -45,6 +45,40 @@ public class App {
                 
         // }
 
+        String[] nomesSplit = textoDeSplit.split("");
+        int controleAchouA = 0;
+        //Foreach
+        for(String a: nomesSplit){
+          if (controleAchouA == 0){
+              System.out.println(a);
+          }
+          else {
+              controleAchouA--;
+          }
+          if(a.toLowerCase().contains("a")){
+              controleAchouA = 2;
+          }
+        }
+
+        //Propriedades break e continue
+        //Continue é para quando é necessário percorrer todos os arrays, antes de ir para a proxima etapa, que no caso é imprimir na tela a frase Não encontrei um b
+        for(String a: nomesSplit){
+            if(a.toLowerCase().contains("b")){
+                controleAchouA = 2;
+                continue;
+            }
+            System.out.println("Não encontrei um b");
+          }
+
+        //para quando for necessário não percorrer todos os arrays, assim que localizado o que precisa ele irá sair da função.
+        for(String a: nomesSplit){
+            if(a.toLowerCase().contains("b")){
+                controleAchouA = 2;
+                break;
+            }
+            System.out.println("Não encontrei um b");
+          }
+
        
        
         
