@@ -63,12 +63,12 @@ public class TreinandoScanner {
 
      /*Adicione toda a cadeia de codigo que criamos 
      em uma estrutura while enquanto o valor de controle for "C" */
-     String controle = "C";
+    //  String controle = "C";
 
-     while(controle.equals("C")){
-        if(!controle.equals("C")){
-            break;
-        }
-     }
+    //  while(controle.equals("C")){
+    //     if(!controle.equals("C")){
+    //         break;
+    //     }
+    //  }
 }
 
