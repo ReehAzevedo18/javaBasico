@@ -1,10 +1,10 @@
 public class Livro {
     
-    Integer anoPublicacao;
-    String nome;
-    String author;    
-    String editora;
-    Integer classificacao;
+    private Integer anoPublicacao;
+    private String nome;
+    private String author;    
+    private String editora;
+    private Integer classificacao;
 
     public Livro(){
 
