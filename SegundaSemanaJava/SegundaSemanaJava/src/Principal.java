@@ -76,7 +76,7 @@ public class Principal {
         if(p == null){
             p = new Pessoa();
         }
-            p.setNome(lerValor("Informe seu nome: ", sc));
+            // p.setNome(lerValor("Informe seu nome: ", sc));
             p.setPeso(lerValor("Informe seu peso:", sc, p.getPeso()));
             p.setSexo(lerValor("Informe o sexo (F/M): ", sc, p.getSexo()));
             return p;

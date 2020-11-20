@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class ControleDeLivros {
@@ -38,9 +39,10 @@ public class ControleDeLivros {
                 System.out.printf("Editora: %s \n",livros[i].getEditora());
                 System.out.printf("Classificação: %s \n",livros[i].getClassificacao());
                 System.out.printf("Ano de publicação: %s \n",livros[i].getAnoPublicacao());
-            }if(!verificaSeTemValor){
-                System.out.println("Cadastre um livro!");
             }
+            if(!verificaSeTemValor)
+                System.out.println("Cadastre um livro!");
+        }      
     }
 
     public static Livro cadastrarLivro(Livro livro, Scanner sc){

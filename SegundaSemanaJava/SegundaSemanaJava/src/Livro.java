@@ -1,7 +1,6 @@
-public class Livro {
+public class Livro extends ClassePadrao{
     
     private Integer anoPublicacao;
-    private String nome;
     private String author;    
     private String editora;
     private Integer classificacao;
@@ -12,7 +11,7 @@ public class Livro {
 
     public Livro(Integer anoPublicacao, String nome, String author, String editora, Integer classificacao){
         this.anoPublicacao = anoPublicacao;
-        this.nome = nome;
+        this.setNome(nome); 
         this.author = author;
         this.editora = editora;
         this.classificacao = classificacao;
@@ -24,15 +23,6 @@ public class Livro {
 
     public Livro setAnoPublicacao(Integer anoPublicacao) {
         this.anoPublicacao = anoPublicacao;
-        return this;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public Livro setNome(String nome) {
-        this.nome = nome;
         return this;
     }
 
