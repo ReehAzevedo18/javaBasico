@@ -1,4 +1,5 @@
-package models;
+package br.com.models;
+
 
 public class Galinha extends Animal {
     
@@ -16,4 +17,5 @@ public class Galinha extends Animal {
 	public void dizerOla() {
 		System.out.println("Olá eu sou uma Galinha!");
 	}
+
 }
