@@ -56,11 +56,13 @@ public class MinhaConexao{
        
     }
 
-    private static Connection conectar()  throws IllegalAccessException, InstantiationException, ClassNotFoundException, SQLException {
+    private static Connection conectar()  
+    
+        throws IllegalAccessException, InstantiationException, ClassNotFoundException, SQLException {
         
         Class.forName(DRIVER).newInstance();
 
-        Connection con = DriverManager.getConnection("jdbc:mysql//" + SERVIDOR + ":" 
+        Connection con = DriverManager.getConnection("jdbc:mysql://" + SERVIDOR + ":" 
         + PORTA + "/" + SCHEMA + PARAMS, USUARIO , "");
 
         return con;
