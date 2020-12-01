@@ -11,8 +11,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
-@Entity(name = "tb_pessoa")
+@Entity
+@Table(name = "tb_pessoa")
 public class Pessoa {
 
 	@Id
@@ -24,14 +26,14 @@ public class Pessoa {
 	private String nome;
 
 	@Enumerated(EnumType.STRING)
-	@Column(name = "sexo_pessoa")
+	@Column(name = "sexo_pessoa", nullable = false)
 	private Sexo sexo;
 
 	@Column(name = "ida_pessoa")
 	private Integer idade;
 
 	@OneToMany
-	private List<Personalidade> personalidades = new ArrayList<>();
+	private List<Personalidade> personalidades = new ArrayList<Personalidade>();
 
 	public Pessoa() {
 
@@ -88,8 +90,8 @@ public class Pessoa {
 
 	@Override
 	public String toString(){
-		return "Sexo: ".concat(sexo == null ? "" : sexo.toString().concat("\n Nome: ")
-		.concat(nome == null ? "" : nome.toString()));
+		return "Sexo: ".concat(sexo == null ? "" : sexo.getNome()).concat("\n Nome: ")
+		.concat(nome == null ? "" : nome.toString());
 	}
 
 }

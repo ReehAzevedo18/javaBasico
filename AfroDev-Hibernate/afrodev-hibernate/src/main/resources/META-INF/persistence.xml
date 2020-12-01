@@ -18,8 +18,10 @@
 			<property name="javax.persistence.jdbc.password" value="" />
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.MySQL5InnoDBDialect" />
-			<property name="hibernate.show_sql" value="true" />
-			<property name="hibernate.format_sql" value="true" />
+
+			<!-- Para deixar de mostrar o que está sendo feito no Hibernate é só por como false -->
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="false" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 
 		</properties>

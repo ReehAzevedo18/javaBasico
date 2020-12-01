@@ -6,10 +6,25 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MenuPessoa",
+            "request": "launch",
+            "mainClass": "jar.MenuPessoa",
+            "projectName": "afrodev-hibernate"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MenuPersonalidade",
+            "request": "launch",
+            "mainClass": "jar.MenuPersonalidade",
+            "projectName": "afrodev-hibernate"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - App",
             "request": "launch",
             "mainClass": "jar.App",
-            "projectName": "afrodev-hibernate"
+            "projectName": "afrodev-hibernate",
+            "noDebug": true
         },
         {
             "type": "java",

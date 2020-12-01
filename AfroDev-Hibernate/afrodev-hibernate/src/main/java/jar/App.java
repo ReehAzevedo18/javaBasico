@@ -32,11 +32,11 @@ public class App
         p.setNome("Renatinha");
         p.setIdade(25);
         p.setSexo(Sexo.MASCULINO);
-        List<Personalidade> personalidades = new ArrayList<>();
+        List<Personalidade> personalidades = new ArrayList<Personalidade>();
 
         //Adicionei uma nova personalidade para essa pessoa
-        personalidades.add(new Personalidade("Extrovertido"));
-        personalidades.add(new Personalidade("Reservado"));
+        personalidades.add(new Personalidade("Seguro"));
+        // personalidades.add(new Personalidade("Reservado"));
         for(int i=0; i < personalidades.size(); i++){
             em.persist(personalidades.get(i));
         }
@@ -47,6 +47,7 @@ public class App
         em.persist(p);
         //Dando commit, uma fez feito, não tem como ser desfeito
         em.getTransaction().commit();
+        em.getTransaction().begin();
 
 
         //Nesse caso eu realizo uma consulta informando o script
@@ -58,7 +59,9 @@ public class App
 
         for(Pessoa pessoa : pessoas){
             System.out.println(p);
+            em.remove(pessoa);
         }
+        em.getTransaction().commit();
 
         //Fecha a consulta 
         em.close();
